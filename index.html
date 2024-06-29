@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adder Tool</title>
-</head>
-<style></style>
-<body>
+  </head>
+  <style></style>
+  <body>
     <div class="box">
-        <h1>Code Sum Tweaker</h1>
-        <p>Enter Number 1:</p>
-        <input type="text" id="num1" />
-        <p>Enter Number 2:</p>
-        <input type="text" id="num2" />
-        <p id="ans">Answer:</p>
-        <button type="btn" onclick="calSum()">Calculate Sum</button>
-        <button type="btn" onclick="resetSum()">Reset All</button>
-      </div>   
-      <script>
-         const num1 = document.getElementById("num1");
+      <h1>Code Sum Tweaker</h1>
+      <p>Enter Number 1:</p>
+      <input type="text" id="num1" />
+      <p>Enter Number 2:</p>
+      <input type="text" id="num2" />
+      <p id="ans">Answer:</p>
+      <button type="btn" onclick="calSum()">Calculate Sum</button>
+      <button type="btn" onclick="resetSum()">Reset All</button>
+    </div>
+    <script>
+      const num1 = document.getElementById("num1");
       const num2 = document.getElementById("num2");
       const answer = document.getElementById("ans");
-
-      </script>
-</body>
+      function calSum() {
+        const val1 = parseInt(num1.value) || 0;
+        const val2 = parseInt(num2.value) || 0;
+        const sum = val1 + val2;
+        answer.innerText = `Answer:${sum}`;
+      }
+      function resetSum() {
+        num1.value = "";
+        num2.value = "";
+        answer.innerText = `Answer:`;
+      }
+    </script>
+  </body>
 </html>
