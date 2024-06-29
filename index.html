@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adder Tool</title>
   </head>
-  <style></style>
+  <style>
+    .box {
+        margin: 50px auto;
+        height: 500px;
+        width: 600px;
+        text-align: center;
+        padding-top: 40px;
+        background-color: #ccccff;
+        border: 3px solid #8080ff;
+        border-radius: 50px;
+      }
+      .title{
+        font-size:40px;
+        font-family:cursive ;
+        color: black;
+      }
+     
+    
+  </style>
   <body>
     <div class="box">
-      <h1>Code Sum Tweaker</h1>
-      <p>Enter Number 1:</p>
-      <input type="text" id="num1" />
-      <p>Enter Number 2:</p>
-      <input type="text" id="num2" />
-      <p id="ans">Answer:</p>
-      <button type="btn" onclick="calSum()">Calculate Sum</button>
-      <button type="btn" onclick="resetSum()">Reset All</button>
+      <h1 class="title">Code Sum Tweaker</h1>
+      <p class="num">Enter Number 1:</p>
+      <input type="text" class="textbox" id="num1" />
+      <p class="num">Enter Number 2:</p>
+      <input type="text" class="textbox" id="num2" />
+      <p id="ans" class="num">Answer:</p>
+      <button type="btn" class="btn" onclick="calSum()">Calculate Sum</button>
+      <button type="btn" class="btn" onclick="resetSum()">Reset All</button>
     </div>
     <script>
       const num1 = document.getElementById("num1");
