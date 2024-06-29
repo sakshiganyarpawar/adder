@@ -38,7 +38,22 @@
       font-weight: 700;
       color:#00001a ;
      }
-    
+    .btn{
+      margin: 7px;
+      width: 150px;
+      height: 50px;
+      border-radius:10px;
+      font-size: 15px;
+     cursor: pointer;
+     font-family:cursive ;
+     background-color:white ;
+     border:3px solid #b4b4f9;
+     box-shadow: 0px 0px 15px 1px rgb(164, 158, 240) ;
+     color:rgb(12, 10, 127);
+    }
+    .btn:hover{
+      border-color: #8080ff;
+    }
   </style>
   <body>
     <div class="box">
@@ -48,8 +63,8 @@
       <p class="num">Enter Number 2:</p>
       <input type="text" class="textbox" id="num2" />
       <p id="ans" class="num">Answer:</p>
-      <button type="btn" class="btn" onclick="calSum()">Calculate Sum</button>
-      <button type="btn" class="btn" onclick="resetSum()">Reset All</button>
+      <button type="btn" class="btn" onclick="calSum()"><b>Calculate Sum</b></button>
+      <button type="btn" class="btn" onclick="resetSum()"><b>Reset All</b></button>
     </div>
     <script>
       const num1 = document.getElementById("num1");
